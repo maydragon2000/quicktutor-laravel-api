@@ -17,17 +17,17 @@ use Illuminate\Foundation\Auth\EmailVerificationRequest;
 Route::get('/', function () {
     return view('home');
 });
-Route::get('/w', function () {
-    return view('welcome');
-});
-// Route::redirect('/here', '/home');
-Auth::routes(['verify' => true]);
+// Route::get('/w', function () {
+//     return view('welcome');
+// });
+// // Route::redirect('/here', '/home');
+// Auth::routes(['verify' => true]);
 
-Route::get('/home', [
-    App\Http\Controllers\HomeController::class,
-    'index',
-])->name('home');
-Route::prefix('google')->name('google.')->group( function(){
-    Route::get('login', [App\Http\Controllers\GoogleController::class, 'loginWithGoogle'])->name('login');
-    Route::any('callback', [App\Http\Controllers\GoogleController::class, 'callbackFromGoogle'])->name('callback');
-});
+// Route::get('/home', [
+//     App\Http\Controllers\HomeController::class,
+//     'index',
+// ])->name('home');
+// Route::prefix('google')->name('google.')->group( function(){
+//     Route::get('login', [App\Http\Controllers\GoogleController::class, 'loginWithGoogle'])->name('login');
+//     Route::any('callback', [App\Http\Controllers\GoogleController::class, 'callbackFromGoogle'])->name('callback');
+// });
